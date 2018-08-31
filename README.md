@@ -1,26 +1,29 @@
 ## App Systemizer (Terminal Emulator)
 [More info and details in the XDA Thread](https://forum.xda-developers.com/apps/magisk/module-terminal-app-systemizer-ui-t3585851)
 
- Systemize your App systemlessly!
- Using terminal emulator.
- Enter this command and choose the app you want to systemize.
+ Systemless地系统化app!
+ 使用终端模拟器.
+ 输入这个命令,然后选择你想要系统化的app.
 
 	systemize
 	
- And you will be presented with a list of installed apps.
- And Reboot to apply changes.
+ 你会看到一个已安装应用的列表
+ 重启以应用更改
 
-## Error?
- Go to the menu and type `logs`, this will upload the log files of this module and will generate a link. Send that :)
- Alternatively, Send `/cache/terminal_debloater-verbose.log` in the XDA thread. I'll examine it for problems and will try to fix it.
+## 遇到错误?
+ 到主菜单输入 `logs`, 这将上传模块的日志文件并生成链接. 发送它们 :)
+ 另外, 发送 `/cache/terminal_debloater-verbose.log` 到 XDA . 我会检查它的问题，然后试着解决它.
 
-## Changelog
+## 变更日志
 
 ### v14
-* Add Set SELinux option to make app detection faster
-* Make "Enter Label" option faster and more efficient
-* Name apk to it's parent folder
-* Misc improvements
+* 添加 SELinux 选项使app检测更加迅速
+* 使 "输入标签" 选项更快和更有效
+* 将apk命名为它的父文件夹
+* 其他改进
+
+### 由于时间关系,不继续翻译旧版日志
+
 ### v13.5.1
 * Fix app detection
 ### v13.5

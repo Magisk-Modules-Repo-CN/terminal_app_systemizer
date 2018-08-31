@@ -49,8 +49,8 @@ elif [ -x $SYSTEM/bin/busybox ]; then
 elif [ $_busybox ]; then
 	true
 else
-	echo "! Busybox not detected.."
-	echo "Please install one (@osm0sis' busybox recommended)"
+	echo "! 未检测到Busybox.."
+	echo "请安装一个 (推荐 @osm0sis' busybox)"
 	false
 fi
 [ $? -ne 0 ] && exit $?
@@ -124,7 +124,7 @@ set_file_prop() {
 			echo "$1=$2" >> $3
 		fi
 	else
-		echo "$3 doesn't exist!"
+		echo "$3 不存在!"
 	fi
 }
 
@@ -141,7 +141,7 @@ ProgressBar() {
 # 1.2 Build progressbar strings and print the ProgressBar line
 # 1.2.1 Output example:
 # 1.2.1.1 Progress : [########################################] 100%
-printf "\rProgress : ${BGBL}|${N}${_done// /${BGBL}$loadBar${N}}${_left// / }${BGBL}|${N} ${_progress}%%"
+printf "\r进度 : ${BGBL}|${N}${_done// /${BGBL}$loadBar${N}}${_left// / }${BGBL}|${N} ${_progress}%%"
 }
 
 #https://github.com/fearside/SimpleProgressSpinner
@@ -174,8 +174,8 @@ e_spinner() {
 
 # test_connection
 test_connection() {
-	echo -n "Testing internet connection "
-	ping -q -c 1 -W 1 google.com >/dev/null 2>/dev/null && echo "- OK" || { echo "Error"; false; }
+	echo -n "测试网络连接 "
+	ping -q -c 1 -W 1 google.cn >/dev/null 2>/dev/null && echo "- OK" || { echo "Error"; false; }
 }
 
 # Log files will be uploaded to termbin.com
@@ -184,7 +184,7 @@ upload_logs() {
 		test_connection
 		[ $? -ne 0 ] && exit
 		verUp=none; oldverUp=none; logUp=none; oldlogUp=none;
-		echo "Uploading logs"
+		echo "上传日志"
 		[ -s $VERLOG ] && verUp=$(cat $VERLOG | nc termbin.com 9999)
 		[ -s $oldVERLOG ] && oldverUp=$(cat $oldVERLOG | nc termbin.com 9999)
 		[ -s $LOG ] && logUp=$(cat $LOG | nc termbin.com 9999)
@@ -196,7 +196,7 @@ upload_logs() {
 
 		O_Log: $oldlogUp
 		Log:   $logUp" | nc termbin.com 9999
-	} || echo "Busybox not found!"
+	} || echo "未找到 Busybox!"
 	exit
 }
 
