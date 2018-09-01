@@ -16,6 +16,8 @@
 
 ## 变更日志
 
+### v14.1
+* Update module template
 ### v14
 * 添加 SELinux 选项使app检测更加迅速
 * 使 "输入标签" 选项更快和更有效
